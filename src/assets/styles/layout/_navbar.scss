@@ -1,0 +1,162 @@
+.header {
+   @include blurPrimary(blur(2rem));
+   // background: rgb(231, 231, 231);
+   // box-shadow: $shadow;
+   border-bottom: 1.5px solid rgba(148, 146, 146, 0.055);
+   width: 100%;
+   position: fixed;
+   z-index: 3;
+
+   &__wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+
+      @media ($tablet) {
+         padding: 1rem 3rem;
+      }
+
+      @media ($desktop) {
+         padding: 1rem 4px;
+         justify-content: space-around;
+      }
+   }
+   
+   &__logo {
+      display: flex;
+      align-items: center;
+      @media ($desktop) {
+         flex-direction: row;
+      }
+      &-text {
+         display: flex;
+         flex-direction: column;
+      }
+
+      .vast-shadow {
+         @include h2($primaryColor);
+         font-family: $logoFont;
+      }
+
+      .merriweather {
+         @include h3($primaryColor);
+         font-family: $logoFont2;
+         padding: 0 10px;
+         display: flex;
+         align-items: center;
+      }
+
+      span.line {
+         flex-grow: 1;
+         height: 3px;
+         background-color: $primaryColor;
+         margin: 0 5px;
+      }
+   }
+
+   &__icon {
+      display: block;
+      color: $primaryColor;
+      cursor: pointer;
+      font-size: 25px;
+
+      @media ($desktop) {
+         display: none;
+      }
+   }
+
+   &__menu {
+      height: 0;
+      position: absolute;
+      top: 88px;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      background: $white;
+      transition: 0.5s;
+      overflow: hidden;
+
+      &.active {
+         height: 340px;
+      }
+
+      @media ($desktop) {
+         width: auto;
+         position: static;
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         overflow: visible;
+         transition: 0;
+      }
+
+      &-items {
+         list-style-type: none;
+         display: block;
+         width: fit-content;
+         margin: 20px auto 0 auto;
+         text-align: center;
+         transition: 0.5s;
+         opacity: 0;
+
+         @media ($desktop) {
+            display: flex;
+            margin: 0;
+            opacity: 1;
+         }
+      }
+
+      &.active ul {
+         opacity: 1;
+      }
+
+      &-item {
+         margin-bottom: 12px;
+
+         @media ($desktop) {
+            margin-bottom: 0;
+            display: flex;
+            margin-right: 1.2rem;
+            &:last-child {
+               margin-right: 0px;
+            }
+         }
+
+
+
+
+      }
+
+      &-link {
+         display: block;
+         @include a($fz: 17px);
+         text-decoration: none;
+
+         @extend %linkAnimate;
+         
+         @media ($desktop) {
+            @include a($fz: 18px);
+         }
+
+         @media ($desktopL) {
+            @include a($fz: 25px);
+         }
+      }
+
+      &-lang{
+
+         width: 50px;
+         height: 45px;
+         cursor: pointer;
+
+         @media ($desktop) {
+            margin-left: 2rem;
+         }
+         
+      }
+
+      
+   }
+}

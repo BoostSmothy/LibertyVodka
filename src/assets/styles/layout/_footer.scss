@@ -1,0 +1,248 @@
+.footer{
+    border-top: 3px solid $white;
+    background: $grey;
+    height: 55rem;
+    padding: 2rem 3rem 2rem 3rem; 
+    @media ($tablet) {
+        padding: 2rem 7rem 2rem 7rem; 
+        height: 60rem;
+
+    }
+    @media ($desktop) {
+        padding: 5rem 3rem 5rem 3rem; 
+        height: 45rem;
+    }
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        // align-items: center
+    }
+
+    &__title{
+        @include h2($white);
+        margin-bottom: 2rem;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0 1rem 2rem 1rem;
+        border-bottom: 1px solid $white;
+        @media ($desktop) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        
+        @media ($desktop) {
+            flex-direction: row;
+            
+            
+        }
+    }
+
+
+    
+  
+    &__contact-form{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 5rem;
+        width: 100%;
+
+        @media ($desktop) {
+           flex-basis: 50rem;
+           margin-bottom: 0;
+           margin-right: 4.6rem;
+        }
+
+
+    }
+    
+    &__forms{
+        display: flex;
+        justify-content: center;
+        width: 70%;
+
+        @media ($desktop) {
+            padding-left: 5rem;
+            
+        }
+    }
+    &__qr{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 15rem;
+        margin-bottom: 5rem;
+
+        @media ($tablet) {
+            width: 25rem;
+        }
+
+        @media ($desktop) {
+            margin-bottom:  0;
+        }
+
+        &-title{
+            margin-bottom: 2rem;
+            @include h3($white);
+            font-size: 25px;
+
+            @media ($tablet) {
+                font-size: 30px;
+            }
+        }
+        &-img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    // &__input{
+    //     font-family: Tahoma;
+    //     @extend %input;
+    //     margin-bottom: 2.1rem;
+    // }
+  
+    // &__textarea{
+    //     font-family: Tahoma;
+    //     @extend %textarea;
+    //     margin-bottom: 2.1rem;
+    // }
+
+    // &__submit{
+    //     display: inline-block;
+    //     background: $white;
+    //     color: $black;
+    //     padding: 12px;
+    //     border: none;
+    //     border-radius: 30px;
+    //     text-decoration: none;
+    //     font-family: Tahoma;
+    //     font-size: 18px;
+    //     line-height: 1;
+    //     font-weight: 300;
+    //     cursor: pointer;
+          
+    //     &:hover{
+    //         filter: brightness(85%);
+    //     }
+    // }
+
+    &__contacts{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        // justify-content: center;
+        align-items: center;
+        
+        
+    }
+
+    &__brand{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        width: 220px;
+        height: auto;
+
+        @media ($tablet) {
+            width: 260px;
+        }
+
+        @media ($desktop) {
+            width: 400px;
+        }
+
+        .vast-shadow {
+            @include h2($white);
+            
+            font-family: $logoFont;
+            font-size: 2.3rem;
+
+            @media ($tablet) {
+                font-size: 2.7rem;
+                
+            }
+            @media ($desktop) {
+                font-size: 4.3rem;
+            }
+        }
+
+        .merriweather {
+            @include h3($white);
+            
+            font-family: $logoFont2;
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+            font-size: 2rem;
+
+            @media ($tablet) {
+                font-size: 2.7rem;
+                
+            }
+            @media ($desktop) {
+                font-size: 3.3rem;
+            }
+        }
+
+        span.line {
+            flex-grow: 1;
+            height: 3px;
+            background-color: $white;
+            margin: 0 5px;
+        }
+    }
+
+    &__phone{
+        text-decoration: none;
+        @include p1($white);
+        font-size: 1.8rem;
+        &:hover{
+            filter: brightness(85%);
+        }
+
+        @media ($tablet) {
+            font-size: 2.2rem;
+        }
+        @media ($desktop) {
+            font-size: 2.2rem;
+        }
+        
+    }
+
+    &__mail{
+        text-decoration: none;
+        @include p1($white);
+        font-size: 1.8rem;
+        &:hover{
+            filter: brightness(85%);
+        }
+        @media ($tablet) {
+            font-size: 2.2rem;
+        }
+
+        @media ($desktop) {
+            font-size: 2.2rem;
+        }
+    }
+
+
+    label.error{
+        display: none!important;
+    }
+    
+
+    form input.error{
+        border-color:red;
+    }
+    
+
+ 
+
+
+}
